@@ -16,7 +16,7 @@ type NFA struct {
 }
 
 // New a new NFA
-func New(s fa.State) *NFA {
+func New(s fa.State) fa.FA {
 
 	retNFA := &NFA{
 		transition:   make(map[fa.TransitionInput]map[fa.State]bool),

@@ -7,7 +7,7 @@ import (
 
 func testMatchString(t *testing.T, expr string, target string) {
 	reg := regexp.MustCompile(expr)
-	re := MustCompile(expr)
+	re := MustCompile(expr, NFA)
 
 	a := reg.MatchString(target)
 	b := re.MatchString(target)

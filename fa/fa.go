@@ -18,7 +18,7 @@ type State interface {
 // FA - Finite Automaton
 type FA interface {
 	AddState(s State)
-	AddTransition(src *State, i Input, dst ...State)
+	AddTransition(src State, i Input, dst ...State)
 
 	Reset()
 	IsFinal() bool
